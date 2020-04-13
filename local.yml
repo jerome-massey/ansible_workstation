@@ -2,5 +2,13 @@
   connection: local
   become: true
   tasks:
-  - name: Install htop
-    dnf: name=htop
+  - name: install epel
+    dnf:
+      name: 
+        - epel-release
+  - name: install common applications
+    dnf:
+      name:
+        - htop
+        - docker-ce
+        
